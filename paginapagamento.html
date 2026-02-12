@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagamento - Imersão N.E.R.V.O™">
+  <title>Pagamento | N.E.R.V.O™</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pagamento.css">
+  
+  <!-- Configuration -->
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo">N.E.R.V.O<span>™</span></a>
+    </div>
+  </nav>
+
+  <!-- Payment Section -->
+  <section style="min-height: 100vh; display: flex; align-items: center; padding-top: 80px;">
+    <div class="container-narrow">
+      
+      <!-- Success Header -->
+      <div class="text-center mb-lg fade-in">
+        <div style="font-size: 4rem; margin-bottom: 1rem;">✓</div>
+        <h1>Perfil Aprovado</h1>
+        <p style="font-size: 1.125rem; opacity: 0.9; margin-top: 1rem;" id="welcomeMessage">
+          Bem-vindo ao processo de inscrição.
+        </p>
+      </div>
+
+      <!-- Resumo da Imersão -->
+      <div class="card mb-md">
+        <h3 class="mb-md text-center">Imersão N.E.R.V.O™</h3>
+        <div style="border-top: 1px solid var(--neural-gray); padding-top: 1.5rem; margin-top: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="opacity: 0.8;">Formato:</span>
+            <span style="font-weight: 500;">3 dias consecutivos | 2h/dia | Online</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="opacity: 0.8;">Acompanhamento:</span>
+            <span style="font-weight: 500;">1 mês pós-imersão (grupo fechado)</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--neural-gray);">
+            <span style="font-size: 1.25rem; font-weight: 500;">Investimento Total:</span>
+            <span style="font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">R$ 12.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Opções de Pagamento -->
+      <div class="card">
+        <h3 class="mb-md">Escolha a forma de pagamento</h3>
+        
+        <!-- Payment Tabs -->
+        <div style="display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--neural-gray);">
+          <button class="payment-tab active" data-tab="pix" style="flex: 1; padding: 1rem; background: none; border: none; border-bottom: 2px solid transparent; color: var(--neural-light); cursor: pointer; font-size: 1rem; transition: all 0.3s;">
+            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">💳</span>
+            PIX
+          </button>
+          <button class="payment-tab" data-tab="card" style="flex: 1; padding: 1rem; background: none; border: none; border-bottom: 2px solid transparent; color: var(--neural-light); cursor: pointer; font-size: 1rem; transition: all 0.3s;">
+            <span style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">💳</span>
+            Cartão de Crédito
+          </button>
+        </div>
+
+        <!-- PIX Payment -->
+        <div id="pixPayment" class="payment-content active">
+          <div style="text-align: center;">
+            <h4 class="mb-md">Pagamento via PIX</h4>
+            <p style="opacity: 0.8; margin-bottom: 2rem;">
+              Escaneie o QR Code abaixo ou copie o código PIX
+            </p>
+            
+            <!-- QR Code Placeholder -->
+            <div style="background: var(--neural-white); padding: 2rem; border-radius: 8px; display: inline-block; margin-bottom: 1.5rem;">
+              <div style="width: 200px; height: 200px; background: var(--neural-gray); display: flex; align-items: center; justify-content: center; color: var(--neural-dark); font-family: var(--font-mono); font-size: 0.75rem;">
+                QR CODE<br>PIX
+              </div>
+            </div>
+
+            <!-- PIX Code -->
+            <div style="background: var(--neural-dark); border: 1px solid var(--neural-gray); padding: 1rem; border-radius: 4px; margin-bottom: 1rem;">
+              <p class="text-mono" style="font-size: 0.75rem; word-break: break-all; margin: 0;" id="pixCode">
+                00020126580014br.gov.bcb.pix0136a1b2c3d4-e5f6-7890-abcd-ef1234567890520400005303986540512000.005802BR5925NERVO REGULACAO NEURAL6009SAO PAULO62070503***63041D3D
+              </p>
+            </div>
+
+            <button class="btn btn-secondary btn-block" onclick="copyPixCode()">
+              Copiar Código PIX
+            </button>
+
+            <p class="text-small" style="margin-top: 1.5rem; opacity: 0.7;">
+              Após o pagamento, você receberá um email de confirmação<br>
+              com as instruções para acessar a imersão.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card Payment -->
+        <div id="cardPayment" class="payment-content" style="display: none;">
+          <h4 class="mb-md">Pagamento via Cartão de Crédito</h4>
+          
+          <!-- Parcelamento -->
+          <div class="form-group">
+            <label class="form-label" for="parcelas">Parcelamento</label>
+            <select id="parcelas" class="form-select">
+              <option value="1">À vista - R$ 12.000,00</option>
+              <option value="2">2x de R$ 6.000,00 sem juros</option>
+              <option value="3">3x de R$ 4.000,00 sem juros</option>
+              <option value="4">4x de R$ 3.000,00 sem juros</option>
+              <option value="6">6x de R$ 2.000,00 sem juros</option>
+              <option value="10">10x de R$ 1.200,00 sem juros</option>
+              <option value="12">12x de R$ 1.000,00 sem juros</option>
+            </select>
+          </div>
+
+          <!-- Card Form -->
+          <div class="form-group">
+            <label class="form-label" for="cardNumber">Número do Cartão</label>
+            <input type="text" id="cardNumber" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label" for="cardExpiry">Validade</label>
+              <input type="text" id="cardExpiry" class="form-input" placeholder="MM/AA" maxlength="5">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cardCvv">CVV</label>
+              <input type="text" id="cardCvv" class="form-input" placeholder="123" maxlength="4">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cardName">Nome no Cartão</label>
+            <input type="text" id="cardName" class="form-input" placeholder="Como está impresso no cartão">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cardCpf">CPF do Titular</label>
+            <input type="text" id="cardCpf" class="form-input" placeholder="000.000.000-00" maxlength="14">
+          </div>
+
+          <button class="btn btn-primary btn-block btn-large" id="cardPaymentBtn">
+            Finalizar Pagamento
+          </button>
+
+          <p class="text-small" style="margin-top: 1rem; text-align: center; opacity: 0.7;">
+            <span style="color: var(--accent-primary);">🔒</span> Pagamento seguro via InfinitePay
+          </p>
+        </div>
+      </div>
+
+      <!-- Garantia -->
+      <div class="card mt-md" style="background: rgba(0, 229, 160, 0.05); border-color: var(--accent-primary);">
+        <h4 class="text-center mb-sm">Garantia de 7 dias</h4>
+        <p style="text-align: center; margin: 0; opacity: 0.9;">
+          Se após o primeiro dia da imersão você não sentir que o método é adequado para você, devolvemos 100% do investimento. Sem perguntas, sem complicações.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="text-mono">N.E.R.V.O™ - Neurostructure of Vital Regulation</p>
+        <p class="text-small" style="margin-top: 0.5rem;">
+          Sistema avançado de regulação neural para tomadores de decisão
+        </p>
+        <p class="text-small" style="margin-top: 1rem; opacity: 0.5;">
+          © 2026 N.E.R.V.O™. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="pagamento.js"></script>
+
+</body>
+</html>

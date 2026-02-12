@@ -1,0 +1,25 @@
+bash
+
+cd /home/claude && ls -la
+Saída
+
+total 151
+drwxr-xr-x 1 root root  4096 Feb  7 22:31 .
+drwxr-xr-x 1 root root  4096 Nov 21 01:53 ..
+drwxr-xr-x 5 root root   100 Nov 21 01:59 .cache
+drwxr-xr-x 3 root root    60 Nov 21 01:57 .config
+drwxr-xr-x 3 root root    60 Nov 21 01:57 .local
+drwxr-xr-x 3 root root    80 Nov 21 02:00 .npm
+drwxr-xr-x 5 root root   100 Nov 21 01:59 .npm-global
+-rw-r--r-- 1 root root    74 Nov 21 01:57 .npmrc
+-rw-r--r-- 1 root root   215 Nov 21 01:58 .wget-hsts
+-rw-r--r-- 1 root root 19665 Feb  7 22:30 ESTRATEGIA_DE_VENDAS.md
+-rw-r--r-- 1 root root 19948 Feb  7 22:31 INTEGRACAO_TECNICA.md
+-rw-r--r-- 1 root root 14468 Feb  7 22:27 README.md
+-rw-r--r-- 1 root root  3074 Feb  7 22:22 form.css
+-rw-r--r-- 1 root root 11612 Feb  7 22:23 form.js
+-rw-r--r-- 1 root root 10286 Feb  7 22:21 global.css
+-rw-r--r-- 1 root root 21154 Feb  7 22:22 index.html
+-rw-r--r-- 1 root root  8937 Feb  7 22:26 obrigado.html
+-rw-r--r-- 1 root root 13705 Feb  7 22:25 pagamento.html
+-rw-r--r-- 1 root root 16630 Feb  7 22:24 sales.html

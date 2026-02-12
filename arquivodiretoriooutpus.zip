@@ -1,0 +1,17 @@
+bash
+
+cd /mnt/user-data/outputs && ls -lh
+Saída
+
+total 183K
+-rw-r--r-- 1 999 root  20K Feb  7 22:31 ESTRATEGIA_DE_VENDAS.md
+-rw-r--r-- 1 999 root  20K Feb  7 22:31 INTEGRACAO_TECNICA.md
+-rw-r--r-- 1 999 root  15K Feb  7 22:31 README.md
+-rw-r--r-- 1 999 root 3.1K Feb  7 22:31 form.css
+-rw-r--r-- 1 999 root  12K Feb  7 22:31 form.js
+-rw-r--r-- 1 999 root  11K Feb  7 22:31 global.css
+-rw-r--r-- 1 999 root  21K Feb  7 22:31 index.html
+-rw-r--r-- 1 999 root  44K Feb  7 22:31 nervo-project.zip
+-rw-r--r-- 1 999 root 8.8K Feb  7 22:31 obrigado.html
+-rw-r--r-- 1 999 root  14K Feb  7 22:31 pagamento.html
+-rw-r--r-- 1 999 root  17K Feb  7 22:31 sales.html

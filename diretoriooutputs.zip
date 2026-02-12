@@ -1,0 +1,6 @@
+bash
+
+cp /home/claude/*.html /home/claude/*.css /home/claude/*.js /home/claude/*.md /mnt/user-data/outputs/ 2>&1
+Saída
+
+exit code 0

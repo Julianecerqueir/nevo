@@ -1,0 +1,15 @@
+bash
+
+cd /mnt/user-data/outputs && zip -r nervo-project.zip *.html *.css *.js *.md 2>&1
+Saída
+
+  adding: index.html (deflated 78%)
+  adding: obrigado.html (deflated 69%)
+  adding: pagamento.html (deflated 70%)
+  adding: sales.html (deflated 74%)
+  adding: form.css (deflated 66%)
+  adding: global.css (deflated 75%)
+  adding: form.js (deflated 71%)
+  adding: ESTRATEGIA_DE_VENDAS.md (deflated 61%)
+  adding: INTEGRACAO_TECNICA.md (deflated 67%)
+  adding: README.md (deflated 57%)

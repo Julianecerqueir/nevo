@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="N.E.R.V.O™ - Sistema avançado de regulação do sistema nervoso para tomadores de decisão sob pressão contínua">
+  <title>N.E.R.V.O™ | Neurostructure of Vital Regulation</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+        </form>
+
+      <!-- 🔥 RESULTADO FINAL (APROVAÇÃO / ANÁLISE / REPROVAÇÃO) -->
+      <div id="resultadoFinal" style="display: block; text-align:center; margin-top:4rem;">
+        <!-- O JavaScript vai escrever aqui -->
+      </div>
+      <!-- 🔥 FIM RESULTADO FINAL -->
+
+    </div>
+  </section>
+
+     <!-- Application Form Section -->
+  <section id="aplicacao" style="padding: 6rem 0;">
+    <div class="container-narrow">
+      <div class="text-center mb-lg">
+        <p class="hero-subtitle">Processo de Qualificação</p>
+        <h2>Formulário de Aplicação</h2>
+        <p style="opacity: 0.8; margin-top: 1rem;">
+          Este é um processo de qualificação técnica. Responda com precisão.<br>
+          O sistema avaliará automaticamente sua adequação ao método.
+        </p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+      </div>
+      <p class="text-center text-mono mb-lg" id="progressText">Questão 1 de 10</p>
+
+      <!-- Form -->
+      <form id="qualificationForm">
+        
+        <!-- Question 1 -->
+        <div class="question-container active" data-question="1">
+          <h3 class="question-title">1. Qual sua posição atual?</h3>
+          <p class="question-subtitle">Eliminatório: Apenas tomadores de decisão reais</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="ceo" data-score="20">
+              <div class="option-content">
+                <h4>CEO / Fundador / Sócio</h4>
+                <p>Responsabilidade máxima pela organização</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="diretor" data-score="18">
+              <div class="option-content">
+                <h4>Diretor / C-Level</h4>
+                <p>Decisões estratégicas de alto impacto</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="gerente" data-score="10">
+              <div class="option-content">
+                <h4>Gerente / Coordenador</h4>
+                <p>Gestão de equipes e processos</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="outro" data-score="0">
+              <div class="option-content">
+                <h4>Outro</h4>
+                <p>Posição não listada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-container" data-question="2">
+          <h3 class="question-title">2. Quantas pessoas dependem diretamente das suas decisões?</h3>
+          <p class="question-subtitle">Escopo de responsabilidade humana</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="50+" data-score="15">
+              <div class="option-content">
+                <h4>50+ pessoas</h4>
+                <p>Alta responsabilidade organizacional</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="20-49" data-score="12">
+              <div class="option-content">
+                <h4>20-49 pessoas</h4>
+                <p>Responsabilidade significativa</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="5-19" data-score="8">
+              <div class="option-content">
+                <h4>5-19 pessoas</h4>
+                <p>Responsabilidade moderada</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="menos-5" data-score="3">
+              <div class="option-content">
+                <h4>Menos de 5</h4>
+                <p>Responsabilidade limitada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-container" data-question="3">
+          <h3 class="question-title">3. Como você descreveria sua carga de pressão atual?</h3>
+          <p class="question-subtitle">Nível de estresse operacional</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="continua" data-score="15">
+              <div class="option-content">
+                <h4>Pressão contínua e intensa</h4>
+                <p>Decisões críticas diariamente</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="alta" data-score="12">
+              <div class="option-content">
+                <h4>Pressão alta frequente</h4>
+                <p>Picos regulares de intensidade</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="moderada" data-score="7">
+              <div class="option-content">
+                <h4>Pressão moderada</h4>
+                <p>Gerenciável na maior parte do tempo</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="baixa" data-score="2">
+              <div class="option-content">
+                <h4>Pressão baixa</h4>
+                <p>Raramente me sinto pressionado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-container" data-question="4">
+          <h3 class="question-title">4. Qual destes sintomas você reconhece em si?</h3>
+          <p class="question-subtitle">Autodiagnóstico de sinais fisiológicos</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="multiplos" data-score="15">
+              <div class="option-content">
+                <h4>Múltiplos sintomas</h4>
+                <p>Cansaço persistente, irritação, hipervigilância, dificuldade em desligar</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="alguns" data-score="10">
+              <div class="option-content">
+                <h4>Alguns sintomas</h4>
+                <p>Identifico 2-3 sintomas de forma recorrente</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="poucos" data-score="5">
+              <div class="option-content">
+                <h4>Poucos sintomas</h4>
+                <p>Ocasionalmente sinto algo, mas é raro</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="nenhum" data-score="0">
+              <div class="option-content">
+                <h4>Nenhum sintoma</h4>
+                <p>Não reconheço esses padrões</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-container" data-question="5">
+          <h3 class="question-title">5. Sua capacidade de recuperação após decisões difíceis é:</h3>
+          <p class="question-subtitle">Resiliência e recuperação somática</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="lenta" data-score="12">
+              <div class="option-content">
+                <h4>Lenta ou inexistente</h4>
+                <p>Acumulo tensão, não consigo recuperar adequadamente</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="incompleta" data-score="10">
+              <div class="option-content">
+                <h4>Incompleta</h4>
+                <p>Recupero parcialmente, mas não por completo</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="razoavel" data-score="6">
+              <div class="option-content">
+                <h4>Razoável</h4>
+                <p>Consigo recuperar com tempo</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="rapida" data-score="3">
+              <div class="option-content">
+                <h4>Rápida</h4>
+                <p>Recupero facilmente e retorno ao baseline</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-container" data-question="6">
+          <h3 class="question-title">6. Você já buscou ou está em terapia/coaching?</h3>
+          <p class="question-subtitle">Histórico de desenvolvimento pessoal</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="sim-ajudou" data-score="8">
+              <div class="option-content">
+                <h4>Sim, e ajudou parcialmente</h4>
+                <p>Mas não resolve o problema da pressão contínua</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="sim-nao-ajudou" data-score="10">
+              <div class="option-content">
+                <h4>Sim, mas não resolveu</h4>
+                <p>Busco algo mais técnico e aplicado</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="nao-interesse" data-score="12">
+              <div class="option-content">
+                <h4>Não, mas tenho interesse</h4>
+                <p>Em algo técnico, não emocional</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="nao-sem-interesse" data-score="3">
+              <div class="option-content">
+                <h4>Não tenho interesse</h4>
+                <p>Não vejo necessidade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-container" data-question="7">
+          <h3 class="question-title">7. Qual seu principal objetivo ao buscar o N.E.R.V.O™?</h3>
+          <p class="question-subtitle">Clareza de intenção</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="clareza" data-score="15">
+              <div class="option-content">
+                <h4>Sustentar clareza sob pressão</h4>
+                <p>Tomar melhores decisões sem desgaste</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="recuperacao" data-score="12">
+              <div class="option-content">
+                <h4>Recuperar estabilidade interna</h4>
+                <p>Parar de pagar o preço invisível</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="performance" data-score="10">
+              <div class="option-content">
+                <h4>Manter performance sustentável</h4>
+                <p>Continuar em alto nível sem colapsar</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="curiosidade" data-score="3">
+              <div class="option-content">
+                <h4>Curiosidade / Exploração</h4>
+                <p>Quero conhecer o método</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-container" data-question="8">
+          <h3 class="question-title">8. Qual sua disponibilidade para a imersão de 3 dias (2h/dia online)?</h3>
+          <p class="question-subtitle">Compromisso logístico</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="imediata" data-score="10">
+              <div class="option-content">
+                <h4>Imediata</h4>
+                <p>Posso começar nas próximas turmas</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="1mes" data-score="8">
+              <div class="option-content">
+                <h4>Dentro de 1 mês</h4>
+                <p>Preciso organizar agenda</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="3meses" data-score="5">
+              <div class="option-content">
+                <h4>Nos próximos 3 meses</h4>
+                <p>Agenda muito comprometida no momento</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="incerto" data-score="2">
+              <div class="option-content">
+                <h4>Incerto</h4>
+                <p>Não tenho previsão de disponibilidade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-container" data-question="9">
+          <h3 class="question-title">9. O investimento do N.E.R.V.O™ é R$ 12.000. Como você avalia?</h3>
+          <p class="question-subtitle">Alinhamento de valor</p>
+          <div class="options-grid">
+            <div class="option-card" data-value="justo" data-score="15">
+              <div class="option-content">
+                <h4>Justo para o resultado esperado</h4>
+                <p>Estou pronto para investir</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="alto-viavel" data-score="10">
+              <div class="option-content">
+                <h4>Alto, mas viável</h4>
+                <p>Preciso entender melhor o retorno</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="alto-dificil" data-score="5">
+              <div class="option-content">
+                <h4>Alto e difícil no momento</h4>
+                <p>Precisaria de condições especiais</p>
+              </div>
+            </div>
+            <div class="option-card" data-value="inviavel" data-score="0">
+              <div class="option-content">
+                <h4>Inviável</h4>
+                <p>Fora do meu orçamento atual</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 10 - Personal Info -->
+        <div class="question-container" data-question="10">
+          <h3 class="question-title">10. Dados de contato</h3>
+          <p class="question-subtitle">Para prosseguimento do processo</p>
+          
+          <div class="form-group">
+            <label class="form-label" for="nome">Nome Completo *</label>
+            <input type="text" id="nome" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input type="email" id="email" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="telefone">Telefone (com DDD) *</label>
+            <input type="tel" id="telefone" class="form-input" placeholder="(11) 99999-9999" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="empresa">Empresa / Organização</label>
+            <input type="text" id="empresa" class="form-input">
+          </div>
+        </div>
+
+
+         <!-- Navigation Buttons -->
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+            ← Anterior
+          </button>
+          <button type="button" class="btn btn-primary" id="nextBtn">
+            Próxima →
+          </button>
+          <button type="submit" class="btn btn-primary btn-large" id="submitBtn" style="display: none;">
+            Enviar Aplicação
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="text-mono">N.E.R.V.O™ - Neurostructure of Vital Regulation</p>
+        <p class="text-small" style="margin-top: 0.5rem;">
+          Sistema avançado de regulação neural para tomadores de decisão
+        </p>
+        <p class="text-small" style="margin-top: 1rem; opacity: 0.5;">
+          © 2026 N.E.R.V.O™. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="formulario.js"></script>
+
+</body>
+</html>
